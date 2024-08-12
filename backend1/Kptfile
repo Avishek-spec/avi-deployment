@@ -1,7 +1,7 @@
 apiVersion: kpt.dev/v1
 kind: Kptfile
 metadata:
-  name: backend
+  name: backend1
 upstream:
   type: git
   git:
@@ -22,7 +22,3 @@ pipeline:
   mutators:
     - image: gcr.io/kpt-fn/set-namespace:v0.4.1
       configPath: package-context.yaml
-inventory:
-  namespace: backend
-  name: inventory-42884861
-  inventoryID: 6297718181168b0c925bbd08c0d7affeaa8e12b0-1723505779673805111
